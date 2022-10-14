@@ -1,5 +1,6 @@
 package com.mycompany.somospnt.entity;
 
+
 public  class Product implements Comparable<Product> {
 
     

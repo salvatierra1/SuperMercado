@@ -2,18 +2,18 @@ package com.mycompany.somospnt.entity;
 
 
 
-public class Soda extends Product{
+public class Beverage extends Product{
     
     private Double liters;
 
-    public Soda() {
+    public Beverage() {
     }
 
-    public Soda(Double liters) {
+    public Beverage(Double liters) {
         this.liters = liters;
     }
 
-    public Soda(int id, String name,  Double liters, Double price) {
+    public Beverage(int id, String name, Double liters, Double price) {
         super(id, name, price);
         this.liters = liters;
     }

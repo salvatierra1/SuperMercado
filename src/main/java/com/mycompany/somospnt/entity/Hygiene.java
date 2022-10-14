@@ -1,18 +1,18 @@
 package com.mycompany.somospnt.entity;
 
 
-public class Shampoo extends Product{
+public class Hygiene extends Product{
     
     private Integer contents;
 
-    public Shampoo() {
+    public Hygiene() {
     }
 
-    public Shampoo(Integer contents) {
+    public Hygiene(Integer contents) {
         this.contents = contents;
     }
 
-    public Shampoo(int id, String name, Integer contents, Double price) {
+    public Hygiene(int id, String name, Integer contents, Double price) {
         super(id, name, price);
         this.contents = contents;
     }
