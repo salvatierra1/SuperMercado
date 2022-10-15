@@ -58,15 +58,20 @@ public class Product implements Comparable<Product> {
         products.add(product);
     }
 
-    public void printProduct() {
-        products.stream().forEach(p -> System.out.println(p + "\n"));
+    public String printProduct() {
+        StringBuilder sb = new StringBuilder();
+        products.stream().forEach(p -> sb.append(p).append("\n"));
+        return sb.toString();
     }
 
-    public void orderProduct() {
+    public String orderProduct() {
         Collections.sort(products);
-        System.out.println("Producto más caro: " + products.get(0).getName());
+        StringBuilder sb = new StringBuilder();
+        sb.append("========================\n");
+        sb.append("Producto más caro: ").append(products.get(0).getName()).append("\n");
         int elementFinal = products.size()-1;
-        System.out.println("Producto más barato: " + products.get(elementFinal).getName());
+        sb.append("Producto más barato: ").append(products.get(elementFinal).getName());
+        return sb.toString();
     }
     
 }
