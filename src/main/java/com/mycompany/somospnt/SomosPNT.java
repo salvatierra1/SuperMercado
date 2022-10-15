@@ -4,9 +4,6 @@ import com.mycompany.somospnt.entity.Fruits;
 import com.mycompany.somospnt.entity.Product;
 import com.mycompany.somospnt.entity.Hygiene;
 import com.mycompany.somospnt.entity.Beverage;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 
 
@@ -14,26 +11,23 @@ public class SomosPNT {
    
     public static void main(String[] args) { 
        
-        Product cocaZero = new Beverage(1, "Coca-Cola Zero", 1.5, 20.0);
-        Product cocaCola = new Beverage(1, "Coca-Cola", 1.5, 18.0);
-        Product shampoSedal = new Hygiene(1, "Shampoo Sedal", 500, 19.0);
-        Product frutilla = new Fruits(1, "Frutillas",64.0, "Kilo");
+        Beverage cocaZero = new Beverage(1, "Coca-Cola Zero", 1.5, 20.0);
+        Beverage cocaCola = new Beverage(1, "Coca-Cola", 1.5, 18.0);
+        Hygiene shampoSedal = new Hygiene(1, "Shampoo Sedal", 500, 19.0);
+        Fruits frutilla = new Fruits(1, "Frutillas",64.0, "Kilo");
         
-        System.out.println(cocaZero + "\n" + cocaCola + "\n" + shampoSedal + "\n" + frutilla);
+        Product product = new Product();
+        
+        product.addProduct(cocaZero);
+        product.addProduct(cocaCola);
+        product.addProduct(shampoSedal);
+        product.addProduct(frutilla);
+        
+        product.printProduct();
         
         System.out.println("========================");
         
-        List<Product> products = new ArrayList<>();
-        products.add(cocaZero);
-        products.add(cocaCola);
-        products.add(shampoSedal);
-        products.add(frutilla);
-       
-        Collections.sort(products);
-      
-        System.out.println("Producto más caro: " + products.get(0).getName());
-        int elementFinal = products.size() - 1;
-        System.out.println("Producto más barato: " + products.get(elementFinal).getName());
+        product.orderProduct();
     }
-    
+
 }

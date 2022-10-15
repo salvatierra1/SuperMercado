@@ -27,11 +27,11 @@ public class Fruits extends Product{
     
     @Override
 	public String toString() {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		String div = " /// ";
-		sb.append("Nombre: " + super.getName() + div);
-		sb.append("Precio: $" + super.getPrice() + div);
-		sb.append("Unidad de venta: " + unit);
+		sb.append("Nombre: ").append(super.getName()).append(div);
+		sb.append("Precio: $").append(super.getPrice()).append(div);
+		sb.append("Unidad de venta: ").append(unit);
 		return sb.toString();
 	}
     

@@ -27,11 +27,11 @@ public class Hygiene extends Product{
 
     @Override
 	public String toString() {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		String div = " /// ";
-		sb.append("Nombre: " + super.getName() + div);
-		sb.append("Contenido: " + contents + div);
-                sb.append("Precio: $" + super.getPrice());
+		sb.append("Nombre: ").append(super.getName()).append(div);
+		sb.append("Contenido: ").append(contents).append(div);
+                sb.append("Precio: $").append(super.getPrice());
 		return sb.toString();
 	}
 }
