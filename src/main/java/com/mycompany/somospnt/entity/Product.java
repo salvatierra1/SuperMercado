@@ -55,7 +55,7 @@ public class Product implements Comparable<Product> {
     }
 
     public void addProduct(Product product) {
-        products.add(product);
+            products.add(product);
     }
 
     public String printProduct() {

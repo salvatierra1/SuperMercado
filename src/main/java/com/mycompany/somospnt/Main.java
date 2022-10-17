@@ -5,7 +5,7 @@ import com.mycompany.somospnt.entity.Product;
 import com.mycompany.somospnt.entity.Hygiene;
 import com.mycompany.somospnt.entity.Beverage;
 
-public class SomosPNT {
+public class Main {
 
     public static void main(String[] args) {
 
